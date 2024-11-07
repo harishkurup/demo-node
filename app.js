@@ -5,6 +5,7 @@ const path = require('path');
 
 const app = express();
 const PORT = 3003;
+const HOST = '0.0.0.0';
 
 app.use(cors());
 
@@ -38,6 +39,6 @@ app.get('/search/:id', (req, res) => {
 });
 
 // Start the server
-app.listen(PORT, () => {
+app.listen(PORT, HOST, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
